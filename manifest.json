@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Hello Extensions",
+  "description": "Wallet from scatch",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "48": "images/icon-48.png"
+  },
+  "permissions": ["scripting", "storage"],
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://developer.chrome.com/docs/extensions/*",
+        "https://developer.chrome.com/docs/webstore/*"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  }
+}
