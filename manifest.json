@@ -19,6 +19,12 @@
       ]
     }
   ],
+  "web_accessible_resources": [
+    {
+      "resources": ["styles.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "background": {
     "service_worker": "service-worker.js",
     "type": "module"
